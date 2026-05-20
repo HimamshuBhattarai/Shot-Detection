@@ -13,7 +13,7 @@ The final pipeline works like this:
 
 ## Challenges
 
-**Ball Detection** was the first big challenge. I did 2 approaches: First using YOLOv8 with pretrained COCO weights, and second using HSV color segmentation to catch the lime green ball. The sports ball class of YOLO did not work on the small speedy padel ball and missed it in all 11 frames sampled. Many false positives in HSV because the colors of the players' clothes and court matched each other. Eventually, the prototype was abandoned in favor of ball detecti
+**Ball Detection** was the first big challenge. I did 2 approaches: First using YOLOv8 with pretrained COCO weights, and second using HSV color segmentation to catch the lime green ball. The sports ball class of YOLO did not work on the small speedy padel ball and missed it in all 11 frames sampled. Many false positives in HSV because the colors of the players' clothes and court matched each other. Eventually, the prototype was abandoned in favor of ball detection
 
 **MediaPipe Version Compatibility** An unanticipated obstacle was MediaPipe Version Compatibility. The deleted API `solutions` occurs in the newest version of mediapipe (0.10.35), leading to an instant AttributeError. This was fixed by downgrading to 0.10.9.
 
