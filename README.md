@@ -72,6 +72,10 @@ This project processes Padel video footage to:
    pip install -r requirements.txt
    ```
 
+
+### Google-Drive Link for output, input data and YOLO
+- https://drive.google.com/drive/folders/1BZMBzPpryRK7gyO9azDTy3XeP12QR0qz?usp=sharing
+
 ### Key Dependencies
 
 - **ultralytics**: YOLOv8 object detection and tracking
