@@ -65,6 +65,7 @@ out.release()
 
 # save results
 df = pd.DataFrame(results)
+df.to_csv('results.csv', index=False)
 df.to_json('results.json', orient='records', indent=2)
 
 print(df)
