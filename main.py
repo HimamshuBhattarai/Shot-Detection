@@ -10,7 +10,7 @@ classifier = ShotClassifier()
 results = []
 frame_no = 0
 
-cap = cv2.VideoCapture("D:\\Dev\\cv task\\data\\input.mp4")
+cap = cv2.VideoCapture("data/input.mp4")
 fps = cap.get(cv2.CAP_PROP_FPS)
 width  = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -64,15 +64,14 @@ while True:
 out.release()
 
 # save results
-# df = pd.DataFrame(results)
-# df.to_csv('results.csv', index=False)
-# df.to_json('results.json', orient='records', indent=2)
+df = pd.DataFrame(results)
+df.to_json('results.json', orient='records', indent=2)
 
-# print(df)
-# print(f"\nTotal shots logged: {len(df)}")
-# if len(df) > 0:
-#     print(df['shot_type'].value_counts())
-# else:
-#     print("No shots detected in the video.")
+print(df)
+print(f"\nTotal shots logged: {len(df)}")
+if len(df) > 0:
+    print(df['shot_type'].value_counts())
+else:
+    print("No shots detected in the video.")
 
 cap.release()

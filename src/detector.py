@@ -5,7 +5,7 @@ from ultralytics import YOLO
 print(torch.cuda.is_available())
 print(torch.cuda.get_device_name(0))
 
-device = torch.device("cuda")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 class PlayerDetector:
     def __init__(self, model_path='yolov8n.pt', conf=0.25):

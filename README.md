@@ -1,10 +1,10 @@
-# Badminton Shot Detection System
+# Padel Shot Detection System
 
-A computer vision system that detects and classifies badminton shots from video footage. The system uses YOLOv8 for player detection with multi-object tracking and MediaPipe for pose estimation to classify shot types.
+A computer vision system that detects and classifies Padel shots from video footage. The system uses YOLOv8 for player detection with multi-object tracking and MediaPipe for pose estimation to classify shot types.
 
 ## Overview
 
-This project processes badminton video footage to:
+This project processes Padel video footage to:
 - **Detect players** in each frame using YOLOv8 nano model
 - **Track players** across frames with consistent ID assignment
 - **Extract pose landmarks** using MediaPipe Pose for body keypoint detection
@@ -15,7 +15,7 @@ This project processes badminton video footage to:
 ## Features
 
 - **Multi-Object Tracking**: Maintains consistent player IDs across video frames
-- **Shot Classification**: Classifies badminton shots based on arm and wrist position relative to body
+- **Shot Classification**: Classifies Padel shots based on arm and wrist position relative to body
   - **Smash**: Right wrist positioned high above shoulder
   - **Forehand**: Right wrist on the right side of the body center
   - **Backhand**: Right wrist crosses to the left side of body center
@@ -35,7 +35,7 @@ This project processes badminton video footage to:
 ├── notebook/
 │   └── Exploration.ipynb        # Data exploration and analysis notebook
 ├── data/                        # Input video directory
-│   └── input.mp4               # Source badminton video
+│   └── input.mp4               # Source Padel video
 ├── results/                     # Output directory
 │   ├── results.json            # Detection results in JSON format
 │   └── analytics.json          # Shot statistics and analytics
